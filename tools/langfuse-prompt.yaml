@@ -4,26 +4,44 @@ identity:
   label:
     en_US: langfuse-prompt
     zh_Hans: langfuse-prompt
-    pt_BR: langfuse-prompt
 description:
   human:
-    en_US: Fetch prompts from langfuse prompt management
-    zh_Hans: Fetch prompts from langfuse prompt management
-    pt_BR: Fetch prompts from langfuse prompt management
-  llm: Fetch prompts from langfuse prompt management
+    en_US: Load prompt from langfuse prompt management
+    zh_Hans: Load prompt from langfuse prompt management
+  llm: Load prompt from langfuse prompt management
 parameters:
-  - name: query
+  - name: prompt_name
     type: string
     required: true
     label:
-      en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
+      en_US: Prompt Name
+      zh_Hans: Prompt Name
     human_description:
-      en_US: Fetch prompts from langfuse prompt management
-      zh_Hans: Fetch prompts from langfuse prompt management
-      pt_BR: Fetch prompts from langfuse prompt management
-    llm_description: Fetch prompts from langfuse prompt management
+      en_US: The name of the prompt.
+      zh_Hans: The name of the prompt.
+    llm_description: The name of the prompt.
+    form: llm
+  - name: label
+    type: string
+    required: false
+    label:
+      en_US: Label
+      zh_Hans: Label
+    human_description:
+      en_US: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
+      zh_Hans: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
+    llm_description: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
+    form: llm
+  - name: version
+    type: number
+    required: false
+    label:
+      en_US: Version
+      zh_Hans: Version
+    human_description:
+      en_US: Version of the prompt to be retrieved.
+      zh_Hans: Version of the prompt to be retrieved.
+    llm_description: Version of the prompt to be retrieved.
     form: llm
 extra:
   python:

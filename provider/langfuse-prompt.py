@@ -7,8 +7,8 @@ from dify_plugin.errors.tool import ToolProviderCredentialValidationError
 class LangfusePromptProvider(ToolProvider):
     def _validate_credentials(self, credentials: dict[str, Any]) -> None:
         try:
-            """
-            IMPLEMENT YOUR VALIDATION HERE
-            """
+            host = credentials.get("langfuse_host")
+            secret_key = credentials.get("langfuse_secret_key")
+            
         except Exception as e:
             raise ToolProviderCredentialValidationError(str(e))

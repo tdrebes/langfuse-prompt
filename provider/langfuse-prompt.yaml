@@ -4,12 +4,38 @@ identity:
   label:
     en_US: langfuse-prompt
     zh_Hans: langfuse-prompt
-    pt_BR: langfuse-prompt
   description:
     en_US: Fetch prompts from langfuse prompt management
     zh_Hans: Fetch prompts from langfuse prompt management
-    pt_BR: Fetch prompts from langfuse prompt management
   icon: icon.svg
+credentials_for_provider:
+  langfuse_host:
+    type: text-input
+    required: true
+    label:
+      en_US: Langfuse Host
+      zh_Hans: Langfuse Host
+    placeholder:
+      en_US: https://your-langfuse-instance.com
+      zh_Hans: https://your-langfuse-instance.com
+  langfuse_secret_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Langfuse Secret Key
+      zh_Hans: Langfuse Secret Key
+    placeholder:
+      en_US: your-langfuse-secret-key
+      zh_Hans: your-langfuse-secret-key
+  langfuse_public_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Langfuse Public Key
+      zh_Hans: Langfuse Public Key
+    placeholder:
+      en_US: your-langfuse-public-key
+      zh_Hans: your-langfuse-public-key
 tools:
   - tools/langfuse-prompt.yaml
 extra:
