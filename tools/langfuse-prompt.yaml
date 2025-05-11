@@ -21,7 +21,7 @@ parameters:
       zh_Hans: The name of the prompt.
     llm_description: The name of the prompt.
     form: llm
-  - name: label
+  - name: prompt_label
     type: string
     required: false
     label:
@@ -32,7 +32,7 @@ parameters:
       zh_Hans: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
     llm_description: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
     form: llm
-  - name: version
+  - name: prompt_version
     type: number
     required: false
     label:
