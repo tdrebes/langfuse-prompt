@@ -1,0 +1,17 @@
+identity:
+  author: tdrebes
+  name: langfuse-prompt
+  label:
+    en_US: langfuse-prompt
+    zh_Hans: langfuse-prompt
+    pt_BR: langfuse-prompt
+  description:
+    en_US: Fetch prompts from langfuse prompt management
+    zh_Hans: Fetch prompts from langfuse prompt management
+    pt_BR: Fetch prompts from langfuse prompt management
+  icon: icon.svg
+tools:
+  - tools/langfuse-prompt.yaml
+extra:
+  python:
+    source: provider/langfuse-prompt.py

@@ -1,0 +1,37 @@
+version: 0.0.1
+type: plugin
+author: tdrebes
+name: langfuse-prompt
+label:
+  en_US: langfuse-prompt
+  ja_JP: langfuse-prompt
+  zh_Hans: langfuse-prompt
+  pt_BR: langfuse-prompt
+description:
+  en_US: Fetch prompts from langfuse prompt management
+  ja_JP: Fetch prompts from langfuse prompt management
+  zh_Hans: Fetch prompts from langfuse prompt management
+  pt_BR: Fetch prompts from langfuse prompt management
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/langfuse-prompt.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-05-11T22:41:51.389116519+02:00
+privacy: PRIVACY.md
+verified: false
