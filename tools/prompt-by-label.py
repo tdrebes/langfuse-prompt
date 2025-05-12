@@ -7,7 +7,7 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from langfuse import Langfuse
 
 
-class LangfusePromptByVersionTool(Tool):
+class LangfusePromptByLabelTool(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         lf = Langfuse(
             host=self.runtime.credentials["langfuse_host"],
@@ -15,12 +15,8 @@ class LangfusePromptByVersionTool(Tool):
             public_key=self.runtime.credentials["langfuse_public_key"],
         )
 
-        if tool_parameters["prompt_version"] < 1:
-            raise ValueError("Prompt version must be greater than 0")
-
         prompt = lf.get_prompt(
-            name=tool_parameters["prompt_name"],
-            version=tool_parameters["prompt_version"],
+            name=tool_parameters["prompt_name"], label=tool_parameters["prompt_label"]
         )
 
         # TODO: cache & support compiled prompts (maybe separate tool) & langfuse observability

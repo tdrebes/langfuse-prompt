@@ -6,9 +6,9 @@ identity:
     zh_Hans: Prompt by version
 description:
   human:
-    en_US: Load prompt from langfuse prompt management
-    zh_Hans: Load prompt from langfuse prompt management
-  llm: Load prompt from langfuse prompt management
+    en_US: Load prompt by version from langfuse prompt management
+    zh_Hans: Load prompt by version from langfuse prompt management
+  llm: Load prompt by version from langfuse prompt management
 parameters:
   - name: prompt_name
     type: string
@@ -21,25 +21,14 @@ parameters:
       zh_Hans: The name of the prompt.
     llm_description: The name of the prompt.
     form: llm
-  - name: prompt_label
-    type: string
-    required: false
-    label:
-      en_US: Label
-      zh_Hans: Label
-    human_description:
-      en_US: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
-      zh_Hans: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
-    llm_description: Label of the prompt to be retrieved. Defaults to "production" if no label or version is set.
-    form: llm
   - name: prompt_version
     type: number
-    required: false
+    required: true
     label:
       en_US: Version
       zh_Hans: Version
     human_description:
-      en_US: Version of the prompt to be retrieved.
+      en_US: Version of the prompt to be retrieved. 
       zh_Hans: Version of the prompt to be retrieved.
     llm_description: Version of the prompt to be retrieved.
     form: llm

@@ -38,6 +38,7 @@ credentials_for_provider:
       zh_Hans: your-langfuse-public-key
 tools:
   - tools/prompt-by-version.yaml
+  - tools/prompt-by-label.yaml
 extra:
   python:
     source: provider/langfuse-prompt.py

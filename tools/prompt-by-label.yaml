@@ -1,0 +1,37 @@
+identity:
+  name: prompt-by-label
+  author: tdrebes
+  label:
+    en_US: Prompt by label
+    zh_Hans: Prompt by label
+description:
+  human:
+    en_US: Load prompt by label from langfuse prompt management
+    zh_Hans: Load prompt by label from langfuse prompt management
+  llm: Load prompt by label from langfuse prompt management
+parameters:
+  - name: prompt_name
+    type: string
+    required: true
+    label:
+      en_US: Prompt Name
+      zh_Hans: Prompt Name
+    human_description:
+      en_US: The name of the prompt.
+      zh_Hans: The name of the prompt.
+    llm_description: The name of the prompt.
+    form: llm
+  - name: prompt_label
+    type: string
+    required: false
+    label:
+      en_US: Label
+      zh_Hans: Label
+    human_description:
+      en_US: Label of the prompt to be retrieved. Defaults to "production" if no label is set.
+      zh_Hans: Label of the prompt to be retrieved. Defaults to "production" if no label is set.
+    llm_description: Label of the prompt to be retrieved. Defaults to "production" if no label is set.
+    form: llm
+extra:
+  python:
+    source: tools/prompt-by-label.py
