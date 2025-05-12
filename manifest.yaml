@@ -3,15 +3,11 @@ type: plugin
 author: tdrebes
 name: langfuse-prompt
 label:
-  en_US: langfuse-prompt
-  ja_JP: langfuse-prompt
-  zh_Hans: langfuse-prompt
-  pt_BR: langfuse-prompt
+  en_US: Langfuse Prompt
+  zh_Hans: Langfuse Prompt
 description:
   en_US: Fetch prompts from langfuse prompt management
-  ja_JP: Fetch prompts from langfuse prompt management
   zh_Hans: Fetch prompts from langfuse prompt management
-  pt_BR: Fetch prompts from langfuse prompt management
 icon: icon.svg
 resource:
   memory: 268435456

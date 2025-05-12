@@ -1,9 +1,9 @@
 identity:
-  name: langfuse-prompt
+  name: prompt-by-version
   author: tdrebes
   label:
-    en_US: langfuse-prompt
-    zh_Hans: langfuse-prompt
+    en_US: Prompt by version
+    zh_Hans: Prompt by version
 description:
   human:
     en_US: Load prompt from langfuse prompt management
@@ -45,4 +45,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/langfuse-prompt.py
+    source: tools/prompt-by-version.py

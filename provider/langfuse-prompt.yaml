@@ -2,8 +2,8 @@ identity:
   author: tdrebes
   name: langfuse-prompt
   label:
-    en_US: langfuse-prompt
-    zh_Hans: langfuse-prompt
+    en_US: Langfuse Prompt
+    zh_Hans: Langfuse Prompt
   description:
     en_US: Fetch prompts from langfuse prompt management
     zh_Hans: Fetch prompts from langfuse prompt management
@@ -37,7 +37,7 @@ credentials_for_provider:
       en_US: your-langfuse-public-key
       zh_Hans: your-langfuse-public-key
 tools:
-  - tools/langfuse-prompt.yaml
+  - tools/prompt-by-version.yaml
 extra:
   python:
     source: provider/langfuse-prompt.py
