@@ -32,6 +32,17 @@ parameters:
       zh_Hans: Version of the prompt to be retrieved.
     llm_description: Version of the prompt to be retrieved.
     form: llm
+  - name: cache_ttl
+    type: number
+    required: false
+    label:
+      en_US: Cache TTL
+      zh_Hans: Cache TTL
+    human_description:
+      en_US: Cache TTL in seconds. Defaults to 0 (no cache).
+      zh_Hans: Cache TTL in seconds. Defaults to 0 (no cache).
+    llm_description: Cache TTL in seconds. Defaults to 0 (no cache).
+    form: llm
 extra:
   python:
     source: tools/prompt-by-version.py
